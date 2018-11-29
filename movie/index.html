@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" href="css/movie.css" />
+	</head>
+	<body>
+		
+		<div class="header">	          				
+	          	<input  type="text" id="search_text" placeholder="请输入关键字">
+				<!--<div class="btn_box">-->
+				<button class="btn" style="color: black;" onclick="Search()">搜索</button>
+				<button class="btn" style="color: black;" onclick="Show_all()">全部</button>	
+				<!--</div>-->
+				
+				
+						
+        </div>	
+		
+		<div class="show_info">		
+			<ul class="show_info_li">
+				<div id="content"></div>	   	
+	    	</ul>	
+		</div>
+		
+        <div id="pagination" class="pagination"></div>
+     	<div id="box" class="box">
+     		<span>top</span>
+     	</div>
+	</body>
+	
+ 	<!--引入search.js-->
+    <script type="text/javascript" src="js/seach.js" ></script>
+	<!--引入滚轮js-->
+	<script type="text/javascript" src="js/sroll.js" ></script>
+    <!--引入分页js -->
+    <script type="text/javascript" src="js/ajax.js" ></script>
+    <!--引入ajax -->
+    <script type="text/javascript" src="js/pages.js" ></script>
+    <!--引入loadjs-->
+    <script type="text/javascript" src="js/load.js" ></script>
+    <!--引入back_top.js-->
+    <script type="text/javascript" src="js/back_top.js" ></script>
+    
+    <!--<script>
+	var url="https://www.zhengchengfeng.cn/test.php";
+	var data;
+               //创建xhr对象
+               function createCORSXhr(url,method){
+                    var xhr=new XMLHttpRequest();
+                    if("withCredentials" in xhr){
+                              xhr.open(method,url,true);                         
+                        }else if(typeof XDomainRequest !=="undefined"){
+                              xhr=new XDomainRequest();                            
+                              xhr.open(method,url);    
+                         }else
+                              xhr=null;
+                         return xhr;                     
+                    }
+               
+               //创建ajax请求
+               function sendAjaxRequest(){
+                    var xhr=createCORSXhr(url,"get");
+                    xhr.onload=function(){
+                         if(xhr.readyState==4){
+                         if(xhr.status>=200 && xhr.status<300 || xhr.status==304){
+							//console.log(xhr.responseText);
+							
+							var json=eval("("+xhr.responseText+")"); 
+						    data=json.data;//rows即是要获取的数组
+							console.log(data);
+                              }else{
+                                   alert(" ajax error...")
+                                   }
+                         }
+                    };
+                    xhr.onerror=function(){
+                         alert("error code:"+xhr.status)
+                    }
+                    xhr.send(null);
+                    };
+	           sendAjaxRequest()
+	</script>-->
+</html>
+
+

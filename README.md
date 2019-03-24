@@ -1,30 +1,10 @@
 # music_yun
 
-> A Vue.js project
+> 第一次提交
 
-## Build Setup
 
-``` bash
-# install dependencies
-npm install
 
-# serve with hot reload at localhost:8080
-npm run dev
-
-# build for production with minification
-npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
-
-# run unit tests
-npm run unit
-
-# run e2e tests
-npm run e2e
-
-# run all tests
-npm test
-```
-
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+####1.看完了html和css从入门到精通
+####2.啃了一下vue-cli和组件的部分，下一步研究一下路由
+####3.研究了一下网易云的网站，碰到了一些问题有点坎坷
+####4.好像npm install 安装了好多依赖项，目前这个文件好大.....

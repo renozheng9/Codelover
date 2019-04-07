@@ -64,9 +64,9 @@ body, html, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, header, menu, sectio
   margin: 0;
 }
 #app {
-  /* width: 100%;
+  width: 100%;
   min-width: 1120px;
-  height: 100%; */
+  height: auto;
   /* font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

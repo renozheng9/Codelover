@@ -40,6 +40,7 @@
             </ul>
         </div>
     </div>
+    <a title="回到顶部" class="box" id="box"  hidefocus="true" >回到顶部</a>
     <!-- <div class="selfResume">
         <ul>
             <li><span>地址：</span><span v-text="selfResume.address"></span></li>
@@ -54,12 +55,71 @@
   </div>
 </template>
 <script>
+    
     export default {
         name: 'footerComponent',
         data () {
             return {
 
             }
+        },
+        mounted: function() {
+            //top
+            function getScrollTop() {
+                    var scrollTop = 0;
+
+                    if(document.documentElement && document.documentElement.scrollTop) {
+                        scrollTop = document.documentElement.scrollTop;
+                    } else if(document.body) {
+                        scrollTop = document.body.scrollTop;
+                    }
+                    
+                    return scrollTop;
+                }
+            
+            //获取当前可视范围的高度
+            function getClientHeight() {
+                var clientHeight = 0;
+
+                if(document.body.clientHeight && document.documentElement.clientHeight) {
+                    clientHeight = Math.min(document.body.clientHeight, document.documentElement.clientHeight);
+                } else {
+                    clientHeight = Math.max(document.body.clientHeight, document.documentElement.clientHeight);
+                }
+
+                return clientHeight;
+            }
+            
+            //获取文档完整的高度
+            function getScrollHeight() {
+                return Math.max(document.body.scrollHeight, document.documentElement.scrollHeight);
+            }
+            //检测滚轮事件
+            var box = document.getElementById('box');
+            window.onscroll = function() {
+            var top = document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop;
+                // console.log(top);
+                // console.log(window.innerHeight);
+                if(top>0){
+		            box.style.visibility = "visible";
+		        }else{
+		            box.style.visibility = "hidden";
+		        }
+            }
+            var timer = null;
+            box.onclick = function(){
+                cancelAnimationFrame(timer);
+                timer = requestAnimationFrame(function fn(){
+                var oTop = document.body.scrollTop || document.documentElement.scrollTop;
+                    console.log(oTop);
+                    if(oTop > 0){
+                    document.body.scrollTop = document.documentElement.scrollTop = oTop - 50;
+                    timer = requestAnimationFrame(fn);
+                    }else{
+                    cancelAnimationFrame(timer);
+                    } 
+                });
+            }    	
         }
     }
 </script>
@@ -75,7 +135,7 @@ a:hover{
     text-decoration: underline;
 }
 .footerComponent{
-    /* position: relative;  */
+    position: relative; 
     height: 148px;
     overflow: hidden;
     border-top: 1px solid #d3d3d3;
@@ -86,7 +146,6 @@ a:hover{
     height: 91px;
     margin: 0 auto;
 }
-
 .footer_text{
     font-size: 12px;
     height: 91px;
@@ -167,5 +226,22 @@ a:hover{
     right: 10%;
     width: 160px;
     height: 100px;
+}
+.box {
+    /* display: block; */
+    visibility : hidden;
+    position: fixed;
+    text-indent: -9999px;
+    left: 50%;
+    margin-left: 500px;
+    bottom: 160px;
+    width: 49px;
+    height: 44px;
+    background-position: -265px -47px;
+    cursor: pointer;
+    background: url(../assets/top.png);
+}
+.box:hover{
+    background: url(../assets/top_click.png);
 }
 </style>

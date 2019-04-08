@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>subsign</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+        
+        a {
+            text-decoration: none
+        }
+        
+        .page-head {
+            height: 4rem;
+            padding: 1rem 1rem 0 1rem;
+            position: absolute;
+            left: 0px;
+            right: 0px;
+            top: 0px;
+            z-index: 10;
+            background-color: transparent;
+        }
+        
+        .head-logo {
+            display: inline-block;
+            margin: 0;
+        }
+        
+        .logo-link {
+            font-size: 32px;
+            font-size: 2rem;
+            line-height: 1.5;
+            font-family: 'Gilroy-Bold';
+            text-transform: lowercase;
+            text-indent: -1000em;
+            color: #fff;
+        }
+        
+        .progress-bar {
+            width: 100%;
+            height: 4px;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        
+        #bar {
+            height: 100%;
+            width: 25%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: #00C0FF;
+        }
+        
+        .contact {
+            margin: 0 0.3rem 0 0;
+            float: right;
+        }
+        
+        .contact-link {
+            display: inline-block;
+            width: 13.875rem;
+            height: auto;
+            border: 0.25rem solid #fff;
+            font-size: 1.125rem;
+            line-height: 2.25;
+            font-family: 'Gilroy-Bold';
+            color: #fff;
+            text-align: center;
+        }
+        
+        .head-list {
+            margin: 0;
+            padding: 0;
+            /*删除无序列表的项目序号 */
+            list-style-type: none;
+            text-align: center;
+            position: absolute;
+            top: 0rem;
+            left: 27rem;
+            right: 0;
+        }
+        
+        .list-item {
+            display: inline;
+        }
+        
+        .list-link {
+            width: 100%;
+            height: 100%;
+            font-size: 1.1rem;
+            line-height: 11vh;
+            padding: 0 1.75rem;
+            font-family: 'Gilroy-Bold';
+            color: #fff;
+        }
+        
+        .sentence-one {
+            width: 100%;
+            position: absolute;
+            top: 30%;
+            left: 5%;
+            font-size: 2.4rem;
+            line-height: 1.3;
+            font-family: 'Gilroy-Extrabold';
+            color: #fff;
+        }
+        
+        .sentences-one {
+            top: 50%;
+            right: 10%;
+            width: 21%;
+            font-size: 16px;
+            font-size: 1rem;
+            line-height: 1.5;
+            font-family: 'Gilroy-Thin';
+            position: absolute;
+            color: #fff;
+        }
+        
+        .firstlink {
+            font-size: 1.115rem;
+            font-family: 'Gilroy-Bold';
+            color: #fff;
+            line-height: 4.2rem;
+        }
+        
+        .linkborder {
+            border: 3px solid #fff;
+            height: 75px;
+            text-align: center;
+        }
+        
+        .linkborder:hover {
+            background-color: #fff;
+        }
+        
+        .firstlink:hover {
+            color: #010101;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="page-head">
+        <div class="progress-bar">
+            <div id="bar"></div>
+        </div>
+        <h1 class="head-logo">
+            <a href="#" class="logo-link">Subsign</a>
+        </h1>
+        <p class="contact">
+            <a href="#" class="contact-link"> Contact us.</a>
+        </p>
+        <ul class="head-list">
+            <li class="list-item">
+                <a href="#" class="list-link">Work.</a>
+            </li>
+            <li class="list-item">
+                <a href="#" class="list-link">Services.</a>
+            </li>
+            <li class="list-item">
+                <a href="#" class="list-link">About.</a>
+            </li>
+            <li class="list-item">
+                <a href="#" class="list-link">Articles.</a>
+            </li>
+            <li class="list-item">
+                <a href="#" class="list-link">Events.</a>
+            </li>
+        </ul>
+    </header>
+    <main>
+        <!--第一页背景 -->
+        <div class="firstback">
+            <img src="../img/backone.jpg" width="100%" height="755px">
+            <div class="sentence-one">
+                <h2>
+                    We are an Awarded Creative <br />Agency that bring real<br /> business results.
+                </h2>
+            </div>
+            <div class="sentences-one">
+                <p>
+                    We make your brand stand out in an overcrowded digital space . Marketing Strategies,Web &amp;Mobile Design,Social Media,Branding and Animations is what we do best.
+                </p> <br />
+                <div class="linkborder">
+                    <a href="#" class="firstlink">
+                        FIND OUT MORE
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- 第二页背景 -->
+        <div class="secondback">
+            <img src="../img/backtwo.jpg" width="100%" height="755px">
+        </div>
+        <!-- 第三页背景 -->
+        <div class="thirdback">
+            <img src="../img/backthree.jpg" width="100%" height="755px">
+        </div>
+        <!-- 第四页背景 -->
+        <div class="forthback">
+            <img src="../img/backfour.jpg" width="100%" height="755px">
+        </div>
+    </main>
+</body>
+
+</html>
